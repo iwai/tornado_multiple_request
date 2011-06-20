@@ -27,8 +27,6 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r"/", MainHandler),
-            (r"/nm-api/([A-Za-z0-9\._]+)?", NmApiHandler),
-            (r"/ycc-api/([A-Za-z0-9\._]+)?", YccApiHandler),
         ]
         tornado.web.Application.__init__(self, handlers, **settings)
 
